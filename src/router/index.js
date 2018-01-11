@@ -2,6 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import App from '@/components/App';
 import HelloWorld from '@/components/HelloWorld';
+import SecondPage from '@/components/SecondPage';
 
 Vue.use(Router);
 
@@ -31,6 +32,13 @@ export default new Router({
           name: 'start',
           components: {
             Content: HelloWorld,
+          },
+        },
+        {
+          path: 'second',
+          name: 'second',
+          components: {
+            Content: SecondPage,
           },
         },
         {
