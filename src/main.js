@@ -2,6 +2,8 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue';
 
+import { sync } from 'vuex-router-sync';
+
 import {
   Vuetify,
   VApp,
@@ -17,6 +19,9 @@ import {
 import '../node_modules/vuetify/src/stylus/app.styl';
 
 import router from './router';
+import store from './store/index';
+
+sync(store, router);
 
 Vue.use(Vuetify, {
   components: {
