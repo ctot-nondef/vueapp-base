@@ -12,7 +12,6 @@ export default new Router({
       path: '/',
       name: 'root',
       redirect: (to) => {
-        /* eslint no-console: ["error", { allow: ["log"] }] */
         if (to.params.lang !== 'en' || to.params.lang !== 'de') {
           const language = window.navigator.userLanguage || window.navigator.language;
           return `/${language.split('-')[0]}`;
